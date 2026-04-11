@@ -60,6 +60,7 @@ agents:
       memory_search: "memory_search"
       memory_save: "memory_save"
       memory_forget: "memory_forget"
+      pasa_search: "pasa_search"  # PASA 学术论文搜索
 
     skills:
       - "bohrium-oss"

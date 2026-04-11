@@ -5,6 +5,7 @@ from .google_search import GoogleSearchTool, GoogleSearchToolParams
 from .web_fetch import WebFetchTool, WebFetchToolParams
 from .delegate_to_agent import DelegateToAgentTool, DelegateToAgentParams
 from .check_background_tasks import CheckBackgroundTasksTool, CheckBackgroundTasksParams
+from .pasa_search import PasaSearchTool, PasaSearchToolParams
 
 __all__ = [
     "AISearchTool", "AISearchToolParams",
@@ -12,4 +13,5 @@ __all__ = [
     "WebFetchTool", "WebFetchToolParams",
     "DelegateToAgentTool", "DelegateToAgentParams",
     "CheckBackgroundTasksTool", "CheckBackgroundTasksParams",
+    "PasaSearchTool", "PasaSearchToolParams",
 ]
