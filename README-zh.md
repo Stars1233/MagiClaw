@@ -127,6 +127,13 @@ MagiClaw/
 
 - **Python** ≥ 3.12
 
+### Docker 环境
+
+MagiClaw 在 **Docker** 容器内执行任务，以隔离运行环境并降低安全风险。
+
+- 可从 [Docker Hub](https://hub.docker.com/r/sjtuagents/magiclaw) 拉取项目提供的基础镜像。
+- 若使用本地或自定义镜像，在 `configs/feishu/config.yaml` 中修改镜像及相关参数即可，详见步骤 8。
+
 ### 安装
 
 ```bash
@@ -216,7 +223,11 @@ uv pip install -r requirements.txt
 
 编辑根目录 `.env`，配置 LLM、搜索等 API 密钥与地址。默认模型与智能体行为可在 `configs/magiclaw/config.yaml` 中调整；飞书侧连接信息在 `configs/feishu/config.yaml`。
 
-### 8. 启动飞书机器人
+### 8. 修改飞书配置文件
+
+编辑 `configs/feishu/config.yaml`，按需配置镜像名称、资源配额、容器名及实例数量等参数。
+
+### 9. 启动飞书机器人
 
 ```bash
 python -m evomaster.interface.feishu --config configs/feishu/config.yaml

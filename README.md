@@ -127,6 +127,13 @@ MagiClaw/
 
 - **Python** ≥ 3.12
 
+### Docker environment
+
+MagiClaw runs workloads in **Docker** containers to isolate the runtime and reduce security risk.
+
+- Pull the base image for this project from [Docker Hub](https://hub.docker.com/r/sjtuagents/magiclaw).
+- To use a local or custom image, set the image and related options in `configs/feishu/config.yaml`; see step 8.
+
 ### Install
 
 ```bash
@@ -216,7 +223,11 @@ Under **Version management & release**, create a version, fill in the details, a
 
 Edit `.env` in the project root for LLM, search, and other API keys and endpoints. Default models and agent behavior are in `configs/magiclaw/config.yaml`; Feishu connection settings are in `configs/feishu/config.yaml`.
 
-### 8. Start the Feishu bot
+### 8. Edit the Feishu configuration file
+
+Edit `configs/feishu/config.yaml` and set the image name, resource limits, container name, and instance count as needed.
+
+### 9. Start the Feishu bot
 
 ```bash
 python -m evomaster.interface.feishu --config configs/feishu/config.yaml
