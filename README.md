@@ -131,7 +131,12 @@ MagiClaw/
 
 MagiClaw runs workloads in **Docker** containers to isolate the runtime and reduce security risk.
 
-- Pull the base image for this project from [Docker Hub](https://hub.docker.com/r/sjtuagents/magiclaw).
+Pull the base image first:
+
+```bash
+docker pull sjtuagents/magiclaw:bohrium
+```
+
 - To use a local or custom image, set the image and related options in `configs/feishu/config.yaml`; see step 8.
 
 ### Install

@@ -131,7 +131,12 @@ MagiClaw/
 
 MagiClaw 在 **Docker** 容器内执行任务，以隔离运行环境并降低安全风险。
 
-- 可从 [Docker Hub](https://hub.docker.com/r/sjtuagents/magiclaw) 拉取项目提供的基础镜像。
+先拉取基础镜像：
+
+```bash
+docker pull sjtuagents/magiclaw:bohrium
+```
+
 - 若使用本地或自定义镜像，在 `configs/feishu/config.yaml` 中修改镜像及相关参数即可，详见步骤 8。
 
 ### 安装
